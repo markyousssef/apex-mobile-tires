@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-const slides = ['/images/about-photo.jpg', '/images/about-kyle.jpg', '/images/about-3.jpg'];
+const base = import.meta.env.BASE_URL;
+const slides = [`${base}images/about-photo.jpg`, `${base}images/about-kyle.jpg`, `${base}images/about-3.jpg`];
 
 function randomNext(current: number, total: number) {
   let next: number;

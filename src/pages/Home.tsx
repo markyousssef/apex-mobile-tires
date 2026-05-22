@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const allSlides = Array.from({ length: 33 }, (_, i) => `/images/photo${i + 1}.jpg`);
-const allSlidesMobile = Array.from({ length: 33 }, (_, i) => `/images/photo${i + 1}_m.jpg`);
+const base = import.meta.env.BASE_URL;
+const allSlides = Array.from({ length: 33 }, (_, i) => `${base}images/photo${i + 1}.jpg`);
+const allSlidesMobile = Array.from({ length: 33 }, (_, i) => `${base}images/photo${i + 1}_m.jpg`);
 
 function randomNext(current: number, total: number) {
   let next: number;
@@ -30,7 +31,7 @@ function GallerySection() {
           <div
             key={i}
             className={`g-slide${current === i ? ' active' : ''}`}
-            style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            style={{ backgroundImage: `url(${src})` }}
           />
         ))}
       </div>

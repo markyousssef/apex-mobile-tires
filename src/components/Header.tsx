@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Logo = () => (
   <Link to="/" className="logo-wrap">
     <img
-      src="/logos/Apex-Mobile-Tire-Final-Logo-Transparent.PNG"
+      src={`${import.meta.env.BASE_URL}logos/Apex-Mobile-Tire-Final-Logo-Transparent.PNG`}
       alt="Apex Mobile Tire"
       className="logo-img"
     />
