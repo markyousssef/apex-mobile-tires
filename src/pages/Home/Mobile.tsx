@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const base = import.meta.env.BASE_URL;
 const slides = Array.from({ length: 33 }, (_, i) => `${base}images/photo${i + 1}_m.jpg`);
@@ -23,7 +22,6 @@ function GallerySection() {
   return (
     <div id="gallery-outer">
       <div id="gallery-canvas">
-        <Link to="/gallery" className="gallery-overlay-link">View Full Gallery</Link>
         {slides.map((src, i) => (
           <div
             key={i}

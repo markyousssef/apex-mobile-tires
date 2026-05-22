@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Review {
   name: string;
@@ -13,6 +13,12 @@ const reviews: Review[] = [
   { name: 'Anna Syrovatkina', text: 'I have been going to Apex since they opened for business and Apex continues to be the best investment of patronage to a business yet. Every time I need tires changed they are quick to respond, make recommendations on brands, and are very competitive on pricing.' },
 ];
 
+function randomNext(current: number, total: number) {
+  let next: number;
+  do { next = Math.floor(Math.random() * total); } while (next === current);
+  return next;
+}
+
 const GoogleIcon = () => (
   <svg viewBox="0 0 24 24" fill="none">
     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -24,32 +30,20 @@ const GoogleIcon = () => (
 
 export default function ReviewsMobile() {
   const [current, setCurrent] = useState(0);
-  const outerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function onScroll() {
-      const outer = outerRef.current;
-      if (!outer) return;
-      const outerTop = outer.getBoundingClientRect().top + window.scrollY;
-      const scrolled = window.scrollY - outerTop;
-      const total = outer.offsetHeight - window.innerHeight;
-      if (total <= 0) return;
-      const progress = Math.max(0, Math.min(1, scrolled / total));
-      setCurrent(Math.min(reviews.length - 1, Math.floor(progress * reviews.length)));
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const interval = setInterval(() => {
+      setCurrent(prev => randomNext(prev, reviews.length));
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div id="reviews-outer" ref={outerRef}>
+    <div id="reviews-outer">
       <div id="reviews-canvas">
         <div className="reviews-label">
           <p className="section-eyebrow">What People Say</p>
           <h1 className="section-title">Reviews</h1>
-        </div>
-        <div className="reviews-counter">
-          <span>{current + 1}</span> / {reviews.length}
         </div>
         {reviews.map((r, i) => (
           <div key={i} className={`r-slide${current === i ? ' active' : ''}`}>

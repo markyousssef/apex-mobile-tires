@@ -23,7 +23,7 @@ export default function AboutMobile() {
     <>
       <div id="about-above-fold">
         <section id="about-hero">
-          <p className="section-eyebrow">Who We Are</p>
+          <h1 className="section-title about-mobile-title">Who We Are</h1>
         </section>
         <div id="about-photo-section">
           {slides.map((src, i) => (

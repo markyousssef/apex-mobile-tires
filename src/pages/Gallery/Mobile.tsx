@@ -24,7 +24,7 @@ export default function GalleryMobile() {
     <div className="gallery-page-wrap">
       <div className="gallery-page-head">
         <div>
-          <p className="section-eyebrow">My Work</p>
+          <p className="section-eyebrow">Our Work</p>
           <h1 className="section-title">Gallery</h1>
         </div>
       </div>

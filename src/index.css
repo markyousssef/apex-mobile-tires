@@ -242,7 +242,8 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   .contact-grid { grid-template-columns: 1fr; gap: 24px; }
   .c-value { font-size: 12px; }
   footer { padding: 20px; }
-  #about-hero { padding: 16px 20px; }
+  #about-hero { padding: 16px 12px; }
+  .about-mobile-title { margin-bottom: 0; font-size: clamp(32px, 9vw, 48px); }
   #about-photo-section { height: calc(100vh - var(--header-h) - 38px); }
   .about-body-wrap { padding: 16px 20px 12px; }
   .about-body-lg { font-size: 16px; }
@@ -253,8 +254,10 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   .cta-actions { flex-direction: column; width: 100%; }
   .cta-btn-primary, .cta-btn-secondary { text-align: center; white-space: normal; word-break: break-all; }
   .gallery-page-wrap { height: auto; display: block; }
-  .gallery-page-head { padding: 20px 20px 12px; }
+  .gallery-page-head { padding: 20px 20px 12px 12px; }
   .gallery-counter-inline { font-size: 15px; }
+  #reviews-outer { height: calc(100vh - var(--header-h)); }
+  #reviews-canvas { position: relative; top: 0; height: 100%; }
   .reviews-label { left: 20px; top: 16px; }
   .reviews-label .section-title { font-size: 26px; margin-bottom: 0; }
   .reviews-counter { right: 20px; top: 22px; font-size: 14px; }
