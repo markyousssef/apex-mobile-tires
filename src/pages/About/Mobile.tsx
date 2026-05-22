@@ -9,7 +9,7 @@ function randomNext(current: number, total: number) {
   return next;
 }
 
-export default function About() {
+export default function AboutMobile() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-export default function Contact() {
+export default function ContactMobile() {
   return (
     <section id="contact">
       <div className="contact-grid">

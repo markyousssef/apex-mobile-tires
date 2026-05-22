@@ -22,7 +22,7 @@ const GoogleIcon = () => (
   </svg>
 );
 
-export default function Reviews() {
+export default function ReviewsMobile() {
   const [current, setCurrent] = useState(0);
   const outerRef = useRef<HTMLDivElement>(null);
 

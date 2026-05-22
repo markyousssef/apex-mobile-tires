@@ -5,7 +5,7 @@ const services = [
   { num: '04', name: 'Flat Repairs', desc: 'Got a flat? Do not stress. We come to you and assess whether the tire can be repaired or needs to be replaced. Fast, professional, and on your schedule so you are back on the road as quickly as possible.' },
 ];
 
-export default function Services() {
+export default function ServicesDesktop() {
   return (
     <>
       <div className="page-header">

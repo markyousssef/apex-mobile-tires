@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const base = import.meta.env.BASE_URL;
-const allSlides = Array.from({ length: 33 }, (_, i) => `${base}images/photo${i + 1}.jpg`);
-const allSlidesMobile = Array.from({ length: 33 }, (_, i) => `${base}images/photo${i + 1}_m.jpg`);
+const slides = Array.from({ length: 33 }, (_, i) => `${base}images/photo${i + 1}_m.jpg`);
 
 function randomNext(current: number, total: number) {
   let next: number;
@@ -13,15 +12,13 @@ function randomNext(current: number, total: number) {
 
 function GallerySection() {
   const [current, setCurrent] = useState(0);
-  const isMobile = window.innerWidth <= 768;
-  const slides = isMobile ? allSlidesMobile : allSlides;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => randomNext(prev, slides.length));
     }, 4000);
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []);
 
   return (
     <div id="gallery-outer">
@@ -39,7 +36,7 @@ function GallerySection() {
   );
 }
 
-export default function Home() {
+export default function HomeMobile() {
   return (
     <>
       <div id="home-above-fold">

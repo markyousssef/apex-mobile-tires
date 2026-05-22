@@ -7,7 +7,7 @@ const cities = [
   'Malibu', 'Oak Park', 'Oxnard', 'Ventura',
 ];
 
-export default function ServiceArea() {
+export default function ServiceAreaMobile() {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<ReturnType<typeof import('leaflet')['map']> | null>(null);
 

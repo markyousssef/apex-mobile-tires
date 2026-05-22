@@ -10,9 +10,8 @@ function randomNext(current: number, total: number) {
   return next;
 }
 
-export default function Gallery() {
+export default function GalleryDesktop() {
   const [current, setCurrent] = useState(0);
-  const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,23 +22,14 @@ export default function Gallery() {
 
   return (
     <div className="gallery-page-wrap">
-      <div className="gallery-page-head">
-        <div>
-          <p className="section-eyebrow">My Work</p>
-          <h1 className="section-title">Gallery</h1>
-        </div>
-      </div>
       <div id="gallery-canvas-full">
-        {slides.map((src, i) => {
-          const imgSrc = isMobile ? src.replace('.jpg', '_m.jpg') : src;
-          return (
-            <div
-              key={i}
-              className={`g-slide-full${current === i ? ' active' : ''}`}
-              style={{ backgroundImage: `url(${imgSrc})` }}
-            />
-          );
-        })}
+        {slides.map((src, i) => (
+          <div
+            key={i}
+            className={`g-slide-full${current === i ? ' active' : ''}`}
+            style={{ backgroundImage: `url(${src})` }}
+          />
+        ))}
       </div>
     </div>
   );
