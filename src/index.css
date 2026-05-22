@@ -228,7 +228,6 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   #hero { padding: 16px 20px 12px; }
   .hero-body { font-size: 13.5px; }
   #gallery-canvas { height: 100%; }
-  #gallery-canvas { height: 75vw; }
   #gallery-canvas-full { height: 75vw; }
   :root { --header-h: 60px; }
   nav { display: none; }
@@ -245,6 +244,7 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   #about-hero { padding: 16px 12px; }
   .about-mobile-title { margin-bottom: 0; font-size: clamp(32px, 9vw, 48px); }
   #about-photo-section { height: calc(100vh - var(--header-h) - 38px); }
+  .about-slide { background-size: contain; background-repeat: no-repeat; background-color: var(--off-white); }
   .about-body-wrap { padding: 16px 20px 12px; }
   .about-body-lg { font-size: 16px; }
   .page-header { padding: 24px 20px; }
@@ -253,11 +253,11 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   .cta-strip { padding: 48px 20px 24px; flex-direction: column; align-items: flex-start; }
   .cta-actions { flex-direction: column; width: 100%; }
   .cta-btn-primary, .cta-btn-secondary { text-align: center; white-space: normal; word-break: break-all; }
-  .gallery-page-wrap { height: auto; display: block; }
+  .gallery-page-wrap { height: auto; display: block; margin-bottom: 0; overflow: hidden; }
   .gallery-page-head { padding: 20px 20px 12px 12px; }
   .gallery-counter-inline { font-size: 15px; }
-  #reviews-outer { height: calc(100vh - var(--header-h)); }
-  #reviews-canvas { position: relative; top: 0; height: 100%; }
+  #reviews-outer { height: calc(100vh - var(--header-h) - 64px); overflow: hidden; }
+  #reviews-canvas { position: relative; top: 0; height: 100%; overflow: hidden; }
   .reviews-label { left: 20px; top: 16px; }
   .reviews-label .section-title { font-size: 26px; margin-bottom: 0; }
   .reviews-counter { right: 20px; top: 22px; font-size: 14px; }
