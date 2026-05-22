@@ -224,7 +224,7 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
 .gallery-cta-btn { display: inline-block; padding: 14px 28px; background: var(--green); color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-decoration: none; }
 
 @media (max-width: 768px) {
-  #home-above-fold { height: calc(100vh - 100px); margin-top: calc(-1 * var(--header-h)); padding-top: var(--header-h); overflow: hidden; }
+  #home-above-fold { height: calc(100vh - 100px); margin-top: calc(-1 * var(--header-h)); padding-top: var(--header-h); }
   #hero { padding: 16px 20px 12px; }
   .hero-body { font-size: 13.5px; }
   #gallery-canvas { height: 100%; }
