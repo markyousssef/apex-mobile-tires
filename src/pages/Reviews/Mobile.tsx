@@ -32,6 +32,14 @@ export default function ReviewsMobile() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    const outer = document.getElementById('reviews-outer');
+    const header = document.querySelector<HTMLElement>('header');
+    const footer = document.querySelector<HTMLElement>('footer');
+    if (!outer || !header || !footer) return;
+    outer.style.height = `${window.innerHeight - header.offsetHeight - footer.offsetHeight}px`;
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => randomNext(prev, reviews.length));
     }, 5000);

@@ -258,12 +258,13 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   .gallery-page-head { padding: 8px 20px 8px 12px; }
   #gallery-canvas-full { margin-top: 8px; }
   .gallery-counter-inline { font-size: 15px; }
-  #reviews-outer { height: calc(100vh - var(--header-h) - 64px); overflow: hidden; }
+  #reviews-outer { overflow: hidden; }
   #reviews-canvas { position: relative; top: 0; height: 100%; overflow: hidden; }
-  .reviews-label { left: 20px; top: 16px; }
+  .reviews-label { left: 20px; top: 10px; }
+  .reviews-label .section-eyebrow { margin-bottom: 2px; }
   .reviews-label .section-title { font-size: 26px; margin-bottom: 0; }
   .reviews-counter { right: 20px; top: 22px; font-size: 14px; }
-  .r-slide { padding: 80px 16px 16px; align-items: flex-start; }
+  .r-slide { padding: 54px 16px 16px; align-items: center; }
   .r-card { padding: 20px 16px; border-radius: 10px; }
   .r-quote-mark { font-size: 36px; margin-bottom: 8px; }
   .r-stars { margin-bottom: 10px; }
