@@ -14,6 +14,12 @@ export default function GalleryMobile() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    const footer = document.querySelector<HTMLElement>('footer');
+    if (footer) footer.style.display = 'none';
+    return () => { if (footer) footer.style.display = ''; };
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => randomNext(prev, TOTAL));
     }, 4000);
