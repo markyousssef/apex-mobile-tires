@@ -30,7 +30,7 @@ export default function AboutMobile() {
             <div
               key={i}
               className={`about-slide${current === i ? ' active' : ''}`}
-              style={{ backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}
+              style={{ backgroundImage: `url(${src})`, backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}
             />
           ))}
         </div>
