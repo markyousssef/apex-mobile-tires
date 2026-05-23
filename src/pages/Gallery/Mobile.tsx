@@ -14,9 +14,11 @@ export default function GalleryMobile() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    const wrap = document.querySelector<HTMLElement>('.gallery-page-wrap');
+    const header = document.querySelector<HTMLElement>('header');
     const footer = document.querySelector<HTMLElement>('footer');
-    if (footer) footer.style.display = 'none';
-    return () => { if (footer) footer.style.display = ''; };
+    if (!wrap || !header || !footer) return;
+    wrap.style.height = `${window.innerHeight - header.offsetHeight - footer.offsetHeight}px`;
   }, []);
 
   useEffect(() => {
