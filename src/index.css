@@ -254,8 +254,9 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   .cta-strip { padding: 48px 20px 24px; flex-direction: column; align-items: flex-start; }
   .cta-actions { flex-direction: column; width: 100%; }
   .cta-btn-primary, .cta-btn-secondary { text-align: center; white-space: normal; word-break: break-all; }
-  .gallery-page-wrap { height: auto; display: block; }
-  .gallery-page-head { padding: 20px 20px 12px 12px; }
+  .gallery-page-wrap { height: auto; display: block; margin-bottom: 0; }
+  .gallery-page-head { padding: 8px 20px 8px 12px; }
+  #gallery-canvas-full { margin-top: 8px; }
   .gallery-counter-inline { font-size: 15px; }
   #reviews-outer { height: calc(100vh - var(--header-h) - 64px); overflow: hidden; }
   #reviews-canvas { position: relative; top: 0; height: 100%; overflow: hidden; }
