@@ -27,10 +27,11 @@ export default function AboutMobile() {
         </section>
         <div id="about-photo-section">
           {slides.map((src, i) => (
-            <div
+            <img
               key={i}
-              className={`about-slide${current === i ? ' active' : ''}`}
-              style={{ backgroundImage: `url(${src})`, backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}
+              src={src}
+              alt=""
+              className={`about-slide-m${current === i ? ' active' : ''}`}
             />
           ))}
         </div>
