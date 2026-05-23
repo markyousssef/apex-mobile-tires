@@ -261,7 +261,7 @@ footer { background: #1a1a18; padding: 24px 48px; display: flex; align-items: ce
   #reviews-outer { overflow: hidden; }
   #reviews-canvas { position: relative; top: 0; height: 100%; overflow: hidden; }
   .reviews-label { left: 20px; top: 22px; }
-  .reviews-label .section-eyebrow { margin-bottom: 10px; }
+  .reviews-label .section-eyebrow { margin-bottom: 18px; }
   .reviews-label .section-title { font-size: 26px; margin-bottom: 0; }
   .reviews-counter { right: 20px; top: 22px; font-size: 14px; }
   .r-slide { padding: 54px 16px 16px; align-items: center; }
