@@ -35,6 +35,11 @@ function GallerySection() {
 }
 
 export default function HomeMobile() {
+  useEffect(() => {
+    const el = document.getElementById('home-above-fold');
+    if (el) el.style.height = `${window.innerHeight - 140}px`;
+  }, []);
+
   return (
     <>
       <div id="home-above-fold">
